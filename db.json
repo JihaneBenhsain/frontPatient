@@ -1,0 +1,32 @@
+{
+	"patients":[
+		{
+			"idPatient":1,
+			"nom":"Benhsain",
+			"prenom":"Jihane",
+			"dateNaissance":"31/10/1997",
+			"sexe":"femelle",
+			"telephone":"0662350174"
+
+		},
+		{
+			"idPatient":2,
+			"nom":"Jeblawi",
+			"prenom":"Imane",
+			"dateNaissance":"01/01/1998",
+			"sexe":"femelle",
+			"telephone":"0662360286"
+
+		},
+		{
+			"idPatient":3,
+			"nom":"Benhsain",
+			"prenom":"Yassine",
+			"dateNaissance":"06/01/2000",
+			"sexe":"Male",
+			"telephone":"06040506070"
+
+		}
+
+	]
+}
