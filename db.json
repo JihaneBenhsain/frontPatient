@@ -28,5 +28,34 @@
 
 		}
 
-	]
+	],
+  "consultations" : [
+    {
+      "idConsul": 1,
+      "nomMedecin": "Manal",
+      "radiologieMedicale": "IRM",
+      "specialiteMedicale": "gynécologie",
+      "dateConsultation": "10/03/1998",
+      "paye": false,
+      "patient_id": 1
+    },
+    {
+      "idConsul": 2,
+      "nomMedecin": "hanan",
+      "radiologieMedicale": "IRM",
+      "specialiteMedicale": "gynécologie",
+      "dateConsultation": "10/03/1998",
+      "paye": true,
+      "patient_id": 1
+    },
+    {
+      "idConsul": 3,
+      "nomMedecin": "jjj",
+      "radiologieMedicale": "IRM",
+      "specialiteMedicale": "gynécologie",
+      "dateConsultation": "10/03/1998",
+      "paye": true,
+      "patient_id": 1
+    }
+  ]
 }
