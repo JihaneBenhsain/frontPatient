@@ -1,0 +1,88 @@
+<div class="row my-4">
+  <div class="col-md-6">
+    <h3>Liste des consultations</h3>
+  </div>
+  <div class="col-md-6 text-right">
+    <button class="btn btn-info btn-sm">
+      <i class="fa fa-plus"></i> Ajouter Consultation
+    </button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 mx-auto">
+
+    <div class="form-group">
+      <label for="nomMedecin">nom Medecin</label>
+      <input [(ngModel)]="myconsultation.nomMedecin" id="nomMedecin" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="radiologieMedicale">radiologie Medicale</label>
+      <input [(ngModel)]="myconsultation.radiologieMedicale" id="radiologieMedicale" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="specialiteMedicale">specialite Medicale</label>
+      <input [(ngModel)]="myconsultation.specialiteMedicale" id="specialiteMedicale" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="dateConsultation">date Consultation</label>
+      <input [(ngModel)]="myconsultation.dateConsultation" id="dateConsultation" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="patient_id">Patient_Id</label>
+      <input [(ngModel)]="myconsultation.patient_id" id="patient_id" type="text" class="form-control">
+    </div>
+
+    <div class="form-check my-2">
+      <label class="form-check-label">
+        <input [(ngModel)]="myconsultation.paye" type="checkbox" class="form-check-input">
+        Payé
+      </label>
+    </div>
+
+    <button class="btn btn-success btn-lg">
+      <i class="fa fa-send"></i> Ajouter consultation
+    </button>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-md mx-auto m-2">
+    <table class="table">
+      <thead class="thead-light">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">nomMedecin</th>
+        <th scope="col">radiologieMedicale</th>
+        <th scope="col">specialiteMedicale</th>
+        <th scope="col">dateConsultation</th>
+        <th scope="col">payé</th>
+        <th scope="col">Patient_id</th>
+        <th scope="col">Actions</th>
+      </tr>
+      </thead>
+      <tbody *ngFor="let consultation of consultations ">
+      <tr>
+        <th scope="row">{{ consultation.idConsul }}</th>
+        <td>{{ consultation.nomMedecin }}</td>
+        <td>{{ consultation.radiologieMedicale }}</td>
+        <td>{{ consultation.specialiteMedicale }}</td>
+        <td>{{ consultation.dateConsultation }}</td>
+        <td>
+              <span [ngClass]="{ 'badge-success': consultation.paye,'badge-danger': !consultation.paye}"  class="badge badge-danger badge-pill">
+                <i class="fa fa-bell"></i>
+              </span>
+        </td>
+        <td>{{ consultation.patient_id }}</td>
+        <td>
+
+          <button (click)="persistConsultation()" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i></button>
+
+          <button (click)="deleteConsultation(consultation.idConsul)" class="btn btn-sm btn-dark"><i class="fa fa-trash"></i></button>
+
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PatientsComponent } from './components/patients/patients.component';
-
+import { RouterModule } from "@angular/router";
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from "@angular/forms";
-
+import { ConsultationsComponent } from './components/consultations/consultations.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    PatientsComponent
+    routingComponents
   ],
   imports: [
     BrowserModule,
